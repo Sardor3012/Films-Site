@@ -60,13 +60,13 @@ reload(movies)
 
 let btns = document.querySelectorAll(".promo__menu-item")
 
-function changeFilm(props) {
-    promo__bg.style.backgroundImage = `url("${props.Poster}")`
-    promo__genre.innerHTML = props.Genre
-    promo__title.innerHTML = props.Title
-    promo__descr.innerHTML = props.Plot
-    imdb.innerHTML = `IMDb: ${props.imdbRating}`
-    reserch.innerHTML = `Кинопоиск: ${props.Metascore}`
+function changeFilm(data) {
+    promo__bg.style.backgroundImage = `url("${data.Poster}")`
+    promo__genre.innerHTML = data.Genre
+    promo__title.innerHTML = data.Title
+    promo__descr.innerHTML = data.Plot
+    imdb.innerHTML = `IMDb: ${data.imdbRating}`
+    reserch.innerHTML = `Кинопоиск: ${data.Metascore}`
 }
 
 btns.forEach(btn => {
